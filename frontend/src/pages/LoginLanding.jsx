@@ -28,12 +28,14 @@ const LoginLanding = () => {
         <div className="w-full max-w-md animate-fade-in relative z-10">
 
           {/* Header */}
+          
           <div className="mb-10 text-center md:text-left">
             <h2 className="text-3xl font-medium text-slate-900 tracking-tight mb-3">Welcome Back</h2>
             <p className="text-slate-500">Select your portal to securely access the system</p>
           </div>
 
           {/* Portal List */}
+
           <div className="space-y-4">
             {portalOptions.map((portal) =>(
               <Link key={portal.to} to={portal.to}
@@ -47,6 +49,7 @@ const LoginLanding = () => {
           </div>
 
           {/* Footer */}
+
           <div className="mt-12 text-center md:text-left text-sm text-slate-400">
             <p>© {new Date().getFullYear()} GreatStack. All rights reserved.</p>
           </div>
