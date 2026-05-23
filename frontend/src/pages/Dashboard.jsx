@@ -25,7 +25,6 @@ const Dashboard = () => {
   },[])
 
 
-
   if(loading) return <Loading />
   if(!data) return <p className ="text-center text-slate-500 py-12">Failed to load dashboard</p>
 
