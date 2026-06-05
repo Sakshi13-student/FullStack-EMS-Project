@@ -10,11 +10,12 @@ export const login = async (req, res) => {
         const {email, password, role_type} = req.body;
         
         if(!email || !password) {
-            return res.status(400).json({error: "Email and password"})
+            return res.status(400).json({error: "Email and password are required"})
         }
         const user = await User.findOne({email})
         if(!user) {
-            return res.status(401).json({ error: "Invalid credentials" });        }
+            return res.status(401).json({ error: "Invalid credentials" });        
+        }
 
         if(role_type === "admin" && user.role !== "ADMIN") {
             return res.status(401).json({error: "Not authorized as admin"});
